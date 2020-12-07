@@ -1,0 +1,15 @@
+version: '3'
+services:
+    cv_4_assign:
+        runtime: nvidia
+        user: $UID:$GID
+        build:
+            context: .
+            args:
+                UID: $UID
+                GID: $GID
+                UNAME: $UNAME
+        volumes:
+            - ./src:/src
+            - ./res:/res
+        command: python /src/main.py 
