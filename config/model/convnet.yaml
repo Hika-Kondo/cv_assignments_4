@@ -1,0 +1,16 @@
+net:
+        name: ConvNet
+        kwargs:
+            in_chan: 1
+            scale_factor: 1
+            num_layer: 5
+            kernel_size: 3
+            act_fn: ReLU
+            maxpool_freq: 2
+            bias: true
+            linear_in: 1568
+            linear_num: 2
+            l_scale_factor: 0.5
+            out_chan: 10
+            base: 32
+            final: Softmax

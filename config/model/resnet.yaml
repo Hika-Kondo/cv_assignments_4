@@ -1,0 +1,15 @@
+net:
+        name: ResNet
+        kwargs:
+                in_chan: 1
+                base: 64
+                num_layer: 6
+                kernel_size: 3
+                act_fn: ReLU
+                maxpool_freq: 3
+                bias: true
+                linear_in: 3136
+                linear_num: 2
+                scale_factor: 0.5
+                out_chan: 10
+                final: Softmax

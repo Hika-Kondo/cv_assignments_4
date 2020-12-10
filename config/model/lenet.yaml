@@ -1,0 +1,4 @@
+net:
+        name: LeNet
+        kwargs:
+                damy: damy

@@ -1,0 +1,41 @@
+ex_name: test
+
+defaults:
+        - model: lenet
+
+transforms:
+        kwargs:
+                affine: false
+                normalize: false
+                rotate: false
+
+solver:
+        kwargs:
+                epochs: 300
+                device: cuda
+                save_dir: model
+
+dataloader:
+        kwargs:
+            batch_size: 64
+            shuffle: true
+            num_workers: 6
+
+optim:
+        name: Adam
+        kwargs:
+                lr : 1e-5
+                betas : [0.9,0.999]
+                eps : 1e-8
+                weight_decay : 0
+
+scheduler:
+        name: StepLR
+        kwargs:
+                step_size: 100
+                gamma: 0.1
+                last_epoch: -1
+
+loss: CrossEntropyLoss
+
+num_data: 54000
